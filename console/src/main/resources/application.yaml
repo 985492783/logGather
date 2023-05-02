@@ -1,0 +1,23 @@
+dubbo:
+  registry:
+    address: nacos://124.220.171.130:8848?&username=nacos&password=nacos
+    protocol: nacos
+  provider:
+    cluster: failfast
+    retries: 0
+    timeout: 6000000
+    token: false
+    dynamic: true
+    delay: -1
+    version: 1.0.0
+    filter: -exception
+  application:
+    name: logGather-console
+  protocol:
+    name: dubbo
+    port: -1
+server:
+  port: 8080
+spring:
+  application:
+    name: logGather-console

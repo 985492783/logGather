@@ -2,7 +2,7 @@ package com.gather.proxy;
 
 import org.slf4j.Logger;
 import org.slf4j.Marker;
-
+import static com.gather.cache.TraceCache.getTrace;
 /**
  * @author 985492783@qq.com
  * @date 2023/4/29 15:57
@@ -27,27 +27,27 @@ public class HttpGatherLogger implements Logger {
     
     @Override
     public void trace(String s) {
-        Logger.trace(s);
+        Logger.trace(getTrace() + s);
     }
     
     @Override
     public void trace(String s, Object o) {
-        Logger.trace(s, o);
+        Logger.trace(getTrace() + s, o);
     }
     
     @Override
     public void trace(String s, Object o, Object o1) {
-        Logger.trace(s, o, o1);
+        Logger.trace(getTrace() + s, o, o1);
     }
     
     @Override
     public void trace(String s, Object... objects) {
-        Logger.trace(s, objects);
+        Logger.trace(getTrace() + s, objects);
     }
     
     @Override
     public void trace(String s, Throwable throwable) {
-        Logger.trace(s, throwable);
+        Logger.trace(getTrace() + s, throwable);
     }
     
     @Override
@@ -57,27 +57,27 @@ public class HttpGatherLogger implements Logger {
     
     @Override
     public void trace(Marker marker, String s) {
-        Logger.trace(marker, s);
+        Logger.trace(marker, getTrace() + s);
     }
     
     @Override
     public void trace(Marker marker, String s, Object o) {
-        Logger.trace(marker, s, o);
+        Logger.trace(marker, getTrace() + s, o);
     }
     
     @Override
     public void trace(Marker marker, String s, Object o, Object o1) {
-        Logger.trace(marker, s, o, o1);
+        Logger.trace(marker, getTrace() + s, o, o1);
     }
     
     @Override
     public void trace(Marker marker, String s, Object... objects) {
-        Logger.trace(marker, s, objects);
+        Logger.trace(marker, getTrace() + s, objects);
     }
     
     @Override
     public void trace(Marker marker, String s, Throwable throwable) {
-        Logger.trace(marker, s, throwable);
+        Logger.trace(marker, getTrace() + s, throwable);
     }
     
     @Override
@@ -87,27 +87,27 @@ public class HttpGatherLogger implements Logger {
     
     @Override
     public void debug(String s) {
-        Logger.debug(s);
+        Logger.debug(getTrace() + s);
     }
     
     @Override
     public void debug(String s, Object o) {
-        Logger.debug(s, o);
+        Logger.debug(getTrace() + s, o);
     }
     
     @Override
     public void debug(String s, Object o, Object o1) {
-        Logger.debug(s, o ,o1);
+        Logger.debug(getTrace() + s, o ,o1);
     }
     
     @Override
     public void debug(String s, Object... objects) {
-        Logger.debug(s, objects);
+        Logger.debug(getTrace() + s, objects);
     }
     
     @Override
     public void debug(String s, Throwable throwable) {
-        Logger.debug(s, throwable);
+        Logger.debug(getTrace() + s, throwable);
     }
     
     @Override
@@ -117,27 +117,27 @@ public class HttpGatherLogger implements Logger {
     
     @Override
     public void debug(Marker marker, String s) {
-        Logger.debug(marker, s);
+        Logger.debug(marker, getTrace() + s);
     }
     
     @Override
     public void debug(Marker marker, String s, Object o) {
-        Logger.debug(marker, s, o);
+        Logger.debug(marker, getTrace() + s, o);
     }
     
     @Override
     public void debug(Marker marker, String s, Object o, Object o1) {
-        Logger.debug(marker, s, o, o1);
+        Logger.debug(marker, getTrace() + s, o, o1);
     }
     
     @Override
     public void debug(Marker marker, String s, Object... objects) {
-        Logger.debug(marker, s, objects);
+        Logger.debug(marker, getTrace() + s, objects);
     }
     
     @Override
     public void debug(Marker marker, String s, Throwable throwable) {
-        Logger.debug(marker, s, throwable);
+        Logger.debug(marker, getTrace() + s, throwable);
     }
     
     @Override
@@ -147,27 +147,27 @@ public class HttpGatherLogger implements Logger {
     
     @Override
     public void info(String s) {
-        Logger.info(s);
+        Logger.info(getTrace() + s);
     }
     
     @Override
     public void info(String s, Object o) {
-        Logger.info(s, o);
+        Logger.info(getTrace() + s, o);
     }
     
     @Override
     public void info(String s, Object o, Object o1) {
-        Logger.info(s, o , o1);
+        Logger.info(getTrace() + s, o , o1);
     }
     
     @Override
     public void info(String s, Object... objects) {
-        Logger.info(s, objects);
+        Logger.info(getTrace() + s, objects);
     }
     
     @Override
     public void info(String s, Throwable throwable) {
-        Logger.info(s, throwable);
+        Logger.info(getTrace() + s, throwable);
     }
     
     @Override
@@ -177,27 +177,27 @@ public class HttpGatherLogger implements Logger {
     
     @Override
     public void info(Marker marker, String s) {
-        Logger.info(marker, s);
+        Logger.info(marker, getTrace() + s);
     }
     
     @Override
     public void info(Marker marker, String s, Object o) {
-        Logger.info(marker, s, o);
+        Logger.info(marker, getTrace() + s, o);
     }
     
     @Override
     public void info(Marker marker, String s, Object o, Object o1) {
-        Logger.info(marker, s, o, o1);
+        Logger.info(marker, getTrace() + s, o, o1);
     }
     
     @Override
     public void info(Marker marker, String s, Object... objects) {
-        Logger.info(marker, s, objects);
+        Logger.info(marker, getTrace() + s, objects);
     }
     
     @Override
     public void info(Marker marker, String s, Throwable throwable) {
-        Logger.info(marker, s, throwable);
+        Logger.info(marker, getTrace() + s, throwable);
     }
     
     @Override
@@ -207,27 +207,27 @@ public class HttpGatherLogger implements Logger {
     
     @Override
     public void warn(String s) {
-        Logger.warn(s);
+        Logger.warn(getTrace() + s);
     }
     
     @Override
     public void warn(String s, Object o) {
-        Logger.warn(s, o);
+        Logger.warn(getTrace() + s, o);
     }
     
     @Override
     public void warn(String s, Object... objects) {
-        Logger.warn(s, objects);
+        Logger.warn(getTrace() + s, objects);
     }
     
     @Override
     public void warn(String s, Object o, Object o1) {
-        Logger.warn(s, o, o1);
+        Logger.warn(getTrace() + s, o, o1);
     }
     
     @Override
     public void warn(String s, Throwable throwable) {
-        Logger.warn(s, throwable);
+        Logger.warn(getTrace() + s, throwable);
     }
     
     @Override
@@ -237,27 +237,27 @@ public class HttpGatherLogger implements Logger {
     
     @Override
     public void warn(Marker marker, String s) {
-        Logger.warn(marker, s);
+        Logger.warn(marker, getTrace() + s);
     }
     
     @Override
     public void warn(Marker marker, String s, Object o) {
-        Logger.warn(marker, s, o);
+        Logger.warn(marker, getTrace() + s, o);
     }
     
     @Override
     public void warn(Marker marker, String s, Object o, Object o1) {
-        Logger.warn(marker, s, o, o1);
+        Logger.warn(marker, getTrace() + s, o, o1);
     }
     
     @Override
     public void warn(Marker marker, String s, Object... objects) {
-        Logger.warn(marker, s, objects);
+        Logger.warn(marker, getTrace() + s, objects);
     }
     
     @Override
     public void warn(Marker marker, String s, Throwable throwable) {
-        Logger.warn(marker, s, throwable);
+        Logger.warn(marker, getTrace() + s, throwable);
     }
     
     @Override
@@ -267,27 +267,27 @@ public class HttpGatherLogger implements Logger {
     
     @Override
     public void error(String s) {
-        Logger.error(s);
+        Logger.error(getTrace() + s);
     }
     
     @Override
     public void error(String s, Object o) {
-        Logger.error(s, o);
+        Logger.error(getTrace() + s, o);
     }
     
     @Override
     public void error(String s, Object o, Object o1) {
-        Logger.error(s, o ,o1);
+        Logger.error(getTrace() + s, o ,o1);
     }
     
     @Override
     public void error(String s, Object... objects) {
-        Logger.error(s, objects);
+        Logger.error(getTrace() + s, objects);
     }
     
     @Override
     public void error(String s, Throwable throwable) {
-        Logger.error(s, throwable);
+        Logger.error(getTrace() + s, throwable);
     }
     
     @Override
@@ -297,26 +297,26 @@ public class HttpGatherLogger implements Logger {
     
     @Override
     public void error(Marker marker, String s) {
-        Logger.error(marker, s);
+        Logger.error(marker, getTrace() + s);
     }
     
     @Override
     public void error(Marker marker, String s, Object o) {
-        Logger.error(marker, s, o);
+        Logger.error(marker, getTrace() + s, o);
     }
     
     @Override
     public void error(Marker marker, String s, Object o, Object o1) {
-        Logger.error(marker, s, o, o1);
+        Logger.error(marker, getTrace() + s, o, o1);
     }
     
     @Override
     public void error(Marker marker, String s, Object... objects) {
-        Logger.error(marker, s, objects);
+        Logger.error(marker, getTrace() + s, objects);
     }
     
     @Override
     public void error(Marker marker, String s, Throwable throwable) {
-        Logger.error(marker, s, throwable);
+        Logger.error(marker, getTrace() + s, throwable);
     }
 }

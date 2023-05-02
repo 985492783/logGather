@@ -1,2 +1,9 @@
 server:
-  port: 8080
+  port: 8081
+dubbo:
+  registry:
+    address: nacos://124.220.171.130:8848?&username=nacos&password=nacos
+    protocol: nacos
+  application:
+    name: logGather-consumer
+    timeout: 3000

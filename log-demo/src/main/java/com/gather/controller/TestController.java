@@ -2,6 +2,7 @@ package com.gather.controller;
 
 import com.gather.factory.LoggerFactory;
 import org.slf4j.Logger;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,10 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
     private final Logger LOGGER = LoggerFactory.getLogger(TestController.class);
-    
     @GetMapping("/get")
     public String test() {
-        LOGGER.info("hello");
+        LOGGER.info("path");
         return "";
     }
 }
