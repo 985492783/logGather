@@ -45,4 +45,13 @@
             <version>1.0</version>
         </dependency>
     </dependencies>
+    
+    <distributionManagement>
+        <repository>
+            <!--必须与 settings.xml 的 id 一致-->
+            <id>soft-coding-devops-log-gather</id>
+            <name>log-gather</name>
+            <url>https://soft-coding-maven.pkg.coding.net/repository/devops/log-gather/</url>
+        </repository>
+    </distributionManagement>
 </project>

@@ -13,7 +13,8 @@
         <module>core</module>
         <module>spring-boot-logGather-starter</module>
         <module>console</module>
-        <module>logGather-dubbo</module>
+        <module>logGather-dubbo/logGather-dobbo-impl</module>
+        <module>logGather-dubbo/logGather-dubbo-api</module>
     </modules>
     
     <properties>
@@ -64,7 +65,7 @@
                     <encoding>${project.build.sourceEncoding}</encoding>
                     <compilerArguments>
                         <!-- rt.jar和jce.jar中间的分隔符，windows为“;”，linux为“:” -->
-                        <bootclasspath>${java.home}/lib/rt.jar:${java.home}/lib/jce.jar</bootclasspath>
+                        <bootclasspath>${java.home}/lib/rt.jar;${java.home}/lib/jce.jar</bootclasspath>
                     </compilerArguments>
                 </configuration>
             </plugin>
