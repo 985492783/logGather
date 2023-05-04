@@ -7,14 +7,13 @@
     <groupId>com.gather</groupId>
     <artifactId>logGather</artifactId>
     <packaging>pom</packaging>
-    <version>1.0</version>
+    <version>${revision}</version>
     <modules>
-        <module>log-demo</module>
         <module>core</module>
+        <module>logGather-dubbo</module>
         <module>spring-boot-logGather-starter</module>
+        <module>log-demo</module>
         <module>console</module>
-        <module>logGather-dubbo/logGather-dobbo-impl</module>
-        <module>logGather-dubbo/logGather-dubbo-api</module>
     </modules>
     
     <properties>
@@ -22,9 +21,11 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <alibaba-version>2021.0.5.0</alibaba-version>
+        <revision>1.1</revision>
     </properties>
 
     <dependencyManagement>
+        
         <dependencies>
             <!-- SpringBoot的依赖配置-->
             <dependency>
@@ -52,7 +53,14 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    
+    <distributionManagement>
+        <repository>
+            <!--必须与 settings.xml 的 id 一致-->
+            <id>soft-coding-devops-log-gather</id>
+            <name>log-gather</name>
+            <url>https://soft-coding-maven.pkg.coding.net/repository/devops/log-gather/</url>
+        </repository>
+    </distributionManagement>
     <build>
         <plugins>
             <plugin>

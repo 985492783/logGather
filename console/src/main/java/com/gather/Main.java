@@ -1,8 +1,10 @@
 package com.gather;
 
+import com.gather.config.TestConfig;
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Import;
 
 /**
  * @author qiyue.zhang@aloudata.com
@@ -11,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 @EnableDubbo(scanBasePackages = "com.gather.facade.impl")
+@Import(TestConfig.class)
 public class Main {
     
     public static void main(String[] args) {
